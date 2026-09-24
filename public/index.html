@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>hackoot — Kahoot Bot Manager</title>
+<link rel="stylesheet" href="/style.css" />
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div id="boot">
+<div><span class="green">KahootBM web cmd</span> <span class="dim">[Version 0.1]</span></div>
+<div class="dim">Free hosted terminal. Bots run on the server.</div>
+<div class="dim">Type <b style="color:#fff">/run</b> to start Kahoot Bot Manager.</div>
+<div id="bootLog"></div>
+<div id="bootInputRow"><span>&gt;</span><input id="bootInput" autocomplete="off" placeholder="type /run" /></div>
+</div>
+
+<div id="manager" class="hidden">
+<div class="header">Kahoot Bot Manager</div>
+<div class="main">
+<div class="panel" id="botsPanel"><h3>Active Bots <span id="botsCount"></span></h3><div id="botsList">(none)</div></div>
+<div class="panel" id="logsPanel"><h3>Logs</h3><div id="logs"></div></div>
+</div>
+<div class="input-panel"><h3>Input</h3><div class="input-row"><span id="prompt">PIN&gt;</span><input id="cmdInput" autocomplete="off" /></div></div>
+<div class="disclaimer">Only use on your own Kahoot games / with host permission. Abuse can get you blocked by Kahoot.</div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

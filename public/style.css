@@ -1,0 +1,72 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: Consolas, Menlo, monospace;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+#boot {
+  flex: 1;
+  padding: 18px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+#boot .dim { color: #888; }
+#boot .green { color: #0f0; }
+#manager { flex: 1; display: flex; flex-direction: column; padding: 10px; gap: 8px; min-height: 0; }
+.hidden { display: none !important; }
+.header {
+  border: 1px solid magenta;
+  color: magenta;
+  padding: 8px 12px;
+  font-weight: bold;
+  background: #14091f;
+}
+.main { flex: 1; display: flex; gap: 8px; min-height: 0; }
+.panel { border: 1px solid #e6b800; padding: 6px 8px; overflow-y: auto; background: #000; min-height: 0; }
+.panel h3 { margin: -6px -8px 6px -8px; padding: 2px 10px; font-size: 14px; color: #e6b800; }
+#botsPanel { width: 35%; }
+#logsPanel { flex: 1; }
+#botsList { white-space: pre-wrap; }
+#logs { white-space: pre-wrap; }
+.log-i { color: cyan; }
+.log-ok { color: #0f0; }
+.log-warn { color: yellow; }
+.log-err { color: #ff5555; }
+.input-panel { border: 1px solid #0a0; padding: 6px 8px; background: #000; }
+.input-panel h3 { margin: -6px -8px 6px -8px; padding: 2px 10px; font-size: 14px; color: #0a0; }
+.input-row { display: flex; gap: 6px; align-items: center; }
+#prompt { color: #fff; white-space: nowrap; }
+#cmdInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 4px;
+  min-width: 0;
+}
+#bootInputRow { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+#bootInput {
+  flex: 1;
+  background: #111;
+  border: 1px solid #333;
+  color: #0f0;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px 8px;
+  outline: none;
+  min-width: 0;
+}
+button { cursor: pointer; }
+.disclaimer { color: #777; font-size: 12px; padding: 4px 10px; }
+@media (max-width: 700px) {
+  .main { flex-direction: column; }
+  #botsPanel { width: 100%; max-height: 30%; }
+}
